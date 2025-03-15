@@ -1,0 +1,108 @@
+/* Resetting margin, padding, and box-sizing for consistent layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Centering the calculator in the viewport */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* Styling the calculator container */
+.calculator {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 320px;  /* Fixed width for a more consistent layout */
+}
+
+/* Header style */
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+/* Styling the display input field */
+#display {
+    width: 100%;
+    height: 50px;
+    font-size: 1.5em;
+    text-align: right;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;  /* Light background for the display */
+    color: #333; /* Dark text color for contrast */
+}
+
+/* Styling the buttons grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Base button styles */
+.btn {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5em;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #e0e0e0;
+    transition: background 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover effect for regular buttons */
+.btn:hover {
+    background: #d1d1d1;
+}
+
+/* Operator button styles */
+.operator {
+    background: #ff9800;
+    color: white;
+}
+
+/* Equal button styles */
+.equal {
+    background: #4caf50;
+    color: white;
+}
+
+/* Hover effect for operator and equal buttons */
+.operator:hover,
+.equal:hover {
+    opacity: 0.8;
+}
+
+/* Add a focused effect on the buttons when clicked */
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Make the layout responsive for smaller screen sizes */
+@media (max-width: 360px) {
+    .calculator {
+        width: 90%; /* Make the calculator take 90% of the screen width */
+        padding: 15px;
+    }
+
+    .btn {
+        width: 50px; /* Smaller buttons for small screens */
+        height: 50px;
+        font-size: 1.1em;
+    }
+}
